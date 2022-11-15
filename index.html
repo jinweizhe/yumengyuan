@@ -1,0 +1,83 @@
+<html>
+
+<head>
+       
+    <meta charset="utf-8" name="viewport"        
+        content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <title>夏虫设计</title>
+        <style>
+        * {
+
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+            background-color: black;
+        }
+
+        span {
+            display: block;
+            position: absolute;
+            font-size: 100px;
+            animation: xin 1s alternate infinite;
+
+        }
+
+        @keyframes xin {
+            0% {
+                color: red;
+                transform: scale(1)
+            }
+
+            100% {
+                color: red;
+                transform: scale(1.2)
+            }
+        }
+
+
+        h1 {
+            color: white;
+            text-align: center;
+            margin-top: 2%;
+            font-size: 20px;
+            text-shadow: 2px 2px 20px rgba(0, 255, 255);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>于梦缘</h1>
+    <h1>
+        这个姐姐有气质，这么沉鱼落雁、国色天姿、齿白唇红、愁眉啼妆，如出水芙蓉、绰约多姿、国色天香、娇小玲珑、绝代佳人、眉目如画、眉清目秀、美如冠玉、花容月貌、靡颜腻理、明眸皓齿、千娇百媚、倾城倾国、螓首蛾眉、如花似玉、双瞳剪水、亭亭玉立、仙姿佚貌、小家碧玉、秀外慧中、夭桃秾李、仪态万方、手如柔玉
+        ，美丽闭月羞花 出水芙蓉    天姿国色   温柔可人   美丽动人   高贵冷艳  艳压群芳   眉清目秀 美若天仙 冰雪聪明温柔可人美若天仙 风华绝代 天生丽质</h1>
+</body>
+
+<script>
+
+    //创建50个心
+    for (let i = 0; i < 50; i++) {
+        let xin = document.createElement("span")
+        xin.innerHTML = "♥"
+        xin.style.left = Math.round(Math.random() * 110) + "%"
+        xin.style.fontSize = Math.round(Math.random() * 50) + "px"
+        document.body.insertAdjacentElement("afterbegin", xin)
+
+        //定时
+        let top = Math.round(Math.random() * 100) - 100
+        let i = top
+        setInterval(function () {
+            i += 0.5
+            xin.style.top = i + "%"
+            if (i >= 100) {
+                i = top
+            }
+        }, 20)
+    }
+</script>
+
+</html>
